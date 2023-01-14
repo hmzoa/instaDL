@@ -6,18 +6,18 @@ created by me from scrach , not using any external instagram library just reques
 *download requirements.txt file before use*
 - pip install -r requirements.txt
 
-usage: python argpasretest.py [-h] [-l <media-link>] [-s <session-id>] [-d] [<media-link>]
+usage: python argpasretest.py [-h] [-l \<media-link>] [-s \<session-id>] [-d] [\<media-link>]
 
  [+] a script to download any media from instagram
 
 positional arguments:
-  <media-link>          the post url link
+  \<media-link>          the post url link
 
 options:
   -h, --help            show this help message and exit
-  -l <media-link>, --link <media-link>
+  -l \<media-link>, --link \<media-link>
                         the post url link
-  -s <session-id>, --sessionid <session-id>
+  -s \<session-id>, --sessionid <session-id>
                         sessionid of an account that follows the private profile
   -d, --debug           turn on debug mode to print requests responses
 
