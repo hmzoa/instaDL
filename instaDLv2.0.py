@@ -4,10 +4,14 @@ import time
 import random
 import string
 import os
-import colorama 
-import requests 
 import sys
-
+try:
+    import colorama 
+    import requests
+except:
+    try:
+        os.system("pip install -r requirements.txt")
+    except:print("requirements.txt not found .")
 colorama.init()
 colorama.Fore.RESET
 
