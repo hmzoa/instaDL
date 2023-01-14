@@ -1,12 +1,7 @@
 # instaDL
 download posts from instagram
 
-    _           _        ____  _
-   (_)_ __  ___| |_ __ _|  _ \| |
-   | | '_ \/ __| __/ _` | | | | |
-  | | | | \__ \ || (_| | |_| | |___
- |_|_| |_|___/\__\__,_|____/|_____|
-                        by - @hmzoa
+created by me from scrach , not using any external instagram library just requests.py to make http requests .
 
 usage: python argpasretest.py [-h] [-l <media-link>] [-s <session-id>] [-d] [<media-link>]
 
