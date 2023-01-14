@@ -17,7 +17,7 @@ options:
   -h, --help            show this help message and exit
   -l \<media-link>, --link \<media-link>
                         the post url link
-  -s \<session-id>, --sessionid <session-id>
+  -s \<session-id>, --sessionid \<session-id>
                         sessionid of an account that follows the private profile
   -d, --debug           turn on debug mode to print requests responses
 
