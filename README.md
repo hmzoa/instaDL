@@ -3,6 +3,9 @@ download posts from instagram
 
 created by me from scrach , not using any external instagram library just requests.py to make http requests .
 
+*download requirements.txt file before use*
+- pip install -r requirements.txt
+
 usage: python argpasretest.py [-h] [-l <media-link>] [-s <session-id>] [-d] [<media-link>]
 
  [+] a script to download any media from instagram
