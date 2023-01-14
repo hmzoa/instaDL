@@ -21,6 +21,6 @@ options:
                         sessionid of an account that follows the private profile
   -d, --debug           turn on debug mode to print requests responses
 
-───────────────────────────────────────┘⌠by @hmzoa⌡┌───────────────────────────────────────
+───────────────────┘⌠by @hmzoa⌡┌───────────────────
 
 the project is not done yet im still devoloping it , if you have ant problem contact me at https://instagram.com/hmzoa/
