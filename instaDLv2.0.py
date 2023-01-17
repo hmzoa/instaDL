@@ -11,7 +11,12 @@ try:
 except:
     try:
         os.system("pip install -r requirements.txt")
-    except:print("requirements.txt not found .")
+    except:
+        try:
+            os.system("pip install colorama")
+            os.system("pip install requests")
+        except:exit()
+        print("requirements.txt not found .")
 colorama.init()
 colorama.Fore.RESET
 sended = colorama.Fore.LIGHTWHITE_EX + " [" + colorama.Fore.LIGHTGREEN_EX + "*" + colorama.Fore.LIGHTWHITE_EX + "] "
@@ -30,7 +35,7 @@ logo = f"""{colorama.Fore.MAGENTA}
 class instaDL:
     def __init__(self) -> None:
         self.versionUrl : str = "https://raw.githubusercontent.com/hmzoa/instaDL/main/Version"
-        self.currentVersion : str = "2.0.1"
+        self.currentVersion : str = "2.2.1"
         self.currentFile : str = __file__.split("\\")[-1]
         parser = argparse.ArgumentParser(
                 description=f'{added}a script to download any media from instagram',
@@ -59,10 +64,10 @@ class instaDL:
         else:
             ""#working on it : login with user and password to download private post python instaDL.py https://intsgram.com/examplePost -u username -p    
     def __del__(self):
-        getVersion = requests.get(self.versionUrl).text
+        getVersion = requests.get(self.versionUrl).text.replace("\n","")
         if getVersion != self.currentVersion:
             print(f"\n{colorama.Fore.LIGHTRED_EX}  -  you are running older version v{self.currentVersion}")
-            print(f"{colorama.Fore.LIGHTGREEN_EX}  -  version v{getVersion.strip('/n')[0]} is available on https://github.com/hmzoa/instaDL/")
+            print(f"{colorama.Fore.LIGHTGREEN_EX}  -  version v{getVersion} is available on https://github.com/hmzoa/instaDL/")
     def publicMediaDL(self):
         print(f"{msgFromProg}Conforming URL.")
         if self.conformUrl():
