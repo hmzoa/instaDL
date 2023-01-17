@@ -1,5 +1,5 @@
 # instaDL
-download posts from instagram
+download posts from instagram v2.2.1
 
 created by me from scrach , not using any external instagram library just requests.py to make http requests .
 
