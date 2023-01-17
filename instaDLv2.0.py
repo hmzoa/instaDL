@@ -56,18 +56,21 @@ class instaDL:
         print(logo)
         if len(sys.argv)==1:
             parser.print_help()
-            exit()
         elif self.sessionid == "empty" :
             self.publicMediaDL()
         elif self.sessionid != "empty" :
             self.privateMediaDL()
         else:
             ""#working on it : login with user and password to download private post python instaDL.py https://intsgram.com/examplePost -u username -p    
-    def __del__(self):
-        getVersion = requests.get(self.versionUrl).text.replace("\n","")
-        if getVersion != self.currentVersion:
-            print(f"\n{colorama.Fore.LIGHTRED_EX}  -  you are running older version v{self.currentVersion}")
-            print(f"{colorama.Fore.LIGHTGREEN_EX}  -  version v{getVersion} is available on https://github.com/hmzoa/instaDL/")
+        self.lastFunc()
+    def lastFunc(self):
+        try:
+            getVersion = requests.get(self.versionUrl).text.replace("\n","")
+            if getVersion != self.currentVersion:
+                print(f"\n{colorama.Fore.LIGHTRED_EX}  -  you are running older version v{self.currentVersion}")
+                print(f"{colorama.Fore.LIGHTGREEN_EX}  -  version v{getVersion} is available on https://github.com/hmzoa/instaDL/")
+            exit()
+        except:exit()
     def publicMediaDL(self):
         print(f"{msgFromProg}Conforming URL.")
         if self.conformUrl():
@@ -80,7 +83,7 @@ class instaDL:
                 print(f"{error_}Somthing went wrong , the media did not download successfully.")
         else:
             print(f"{annowns}Invalid URL {colorama.Fore.LIGHTYELLOW_EX + str(self.url) } .")
-            exit()
+            
     def privateMediaDL(self):
             print(f"{msgFromProg}Conforming URL.")
             if self.conformUrl():
@@ -92,7 +95,7 @@ class instaDL:
                     print(f"{error_}Somthing went wrong , the media did not download successfully.")
             else:
                 print(f"{annowns}Invalid URL {colorama.Fore.LIGHTYELLOW_EX + str(self.url) } .")
-                exit()
+                
     def conformUrl(self):
         if self.url != "empty":
             if self.url.startswith("https://www.instagram.com/"):#"https://www.instagram.com/" in self.url:
