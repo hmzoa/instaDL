@@ -24,3 +24,8 @@ options:
 ───────────────────┘⌠by @hmzoa⌡┌───────────────────
 
 the project is not done yet im still devoloping it , if you have ant problem contact me at https://instagram.com/hmzoa/
+
+##screenshots
+![help page](https://github.com/hmzoa/instaDL/blob/main/screenshots-delete/instaDL.png)
+![download any insta post](https://github.com/hmzoa/instaDL/blob/main/screenshots-delete/instaDL2.png)
+![download any insta post with instagram session id](https://github.com/hmzoa/instaDL/blob/main/screenshots-delete/instaDL3.png)
